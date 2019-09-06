@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "start spreading the news"
+
+# Projet.destroy_all
+
+Projet.create(
+  name:"Outbook",
+  description:"",
+  url:"",
+  image1:"",
+  image2:"",
+  image3:"",
+  image4:"",
+  image5:"",
+  )
+
+
+puts "Now, there are #{Projet.count} saved via seed in Database"
+
+puts "New york, neeeeew yooooooork"
