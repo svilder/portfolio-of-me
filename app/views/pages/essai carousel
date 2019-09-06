@@ -1,0 +1,51 @@
+essai carousel
+
+<!-- each sur projet / display = carousel de bootstrap -->
+
+    <% @projets.each do |projet| %>
+      <div class="card">
+        <%= link_to projet.name, projet.url %>
+        <p><%= projet.description %></p>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= image_tag projet.image1, class:"d-block w-100" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag projet.image2, class:"d-block w-100" %>
+            </div>
+            <% unless projet.image3 == "" || projet.image3.nil? %>
+              <div class="carousel-item">
+                <%= image_tag projet.image3, class:"d-block w-100" %>
+              </div>
+            <% end %>
+            <% unless projet.image4 == "" || projet.image3.nil? %>
+              <div class="carousel-item">
+                <%= image_tag projet.image4, class:"d-block w-100" %>
+              </div>
+            <% end %>
+            <% unless projet.image5 == "" || projet.image3.nil? %>
+              <div class="carousel-item">
+                <%= image_tag projet.image5, class:"d-block w-100" %>
+              </div>
+            <% end %>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    <% end %>

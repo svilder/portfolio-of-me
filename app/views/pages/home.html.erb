@@ -1,6 +1,95 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container plus-navbar" id="top">
+  <div class="header">
+    <h1 class="text-center">SANDRA VILDER</h1>
+    <h2 class="text-center">Développeuse FullStack</h2>
+    <p class="text-center">
+        Je suis développeuse back end et front end indépendante, j’utilise Ruby on Rails et j’ai été formée au Wagon à Paris.
+      </p>
+  </div>
+  <div class="xp-display">
+    <h3 class="text-center">XP</h3>
 
-<% @projets.each do |projet| %>
-  <p><%= projet.name %></p>
-<% end %>
+    <!-- each sur projet / display = carousel de bootstrap -->
+
+    <% @projets.each do |projet| %>
+      <div class="card">
+        <%= link_to projet.name, projet.url %>
+        <p><%= projet.description %></p>
+            <div class="image">
+              <%= image_tag projet.image1, class:"w-50" %>
+            </div>
+            <div class="image">
+              <%= image_tag projet.image2, class:"w-50" %>
+            </div>
+            <% unless projet.image3 == "" || projet.image3.nil? %>
+              <div class="image">
+                <%= image_tag projet.image3, class:"w-50" %>
+              </div>
+            <% end %>
+            <% unless projet.image4 == "" || projet.image3.nil? %>
+              <div class="image">
+                <%= image_tag projet.image4, class:"w-50" %>
+              </div>
+            <% end %>
+            <% unless projet.image5 == "" || projet.image3.nil? %>
+              <div class="image">
+                <%= image_tag projet.image5, class:"w-50" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h3 class="text-center">Skills</h3>
+  <div class="skills">
+    <!-- logo des skills -->
+    <%= image_tag 'html.png', class:"logo" %>
+    <%= image_tag 'css.png', class:"logo" %>
+    <%= image_tag 'js.png', class:"logo" %>
+    <%= image_tag 'Ruby.png', class:"logo" %>
+    <%= image_tag 'Rails.png', class:"logo" %>
+    <%= image_tag 'heroku.png', class:"logo" %>
+    <%= image_tag 'InDesign.png', class:"logo" %>
+    <%= image_tag 'Photoshop.png', class:"logo" %>
+  </div>
+
+  <div class="details">
+    <h3 class="text-center">Background</h3>
+    <p>
+      Après avoir travaillé dans le milieu culturel et particulièrement dans l'édition de bande dessinée, je suis devenue développeuse web pour continuer à développer tous les projets fous qui sont dans ma tête et dans celle des autres.
+
+      Je garde un attachement fort avec les illustrateurs avec qui j’ai travaillé et propose des illustrations sur mesure pour intégrer aux sites de mes clients.
+
+      Je suis sur Paris, mais je peux me déplacer car c’est toujours un plaisir de rencontrer mes clients en personne.
+    </p>
+  </div>
+
+  <div class="links">
+    <h3 class="text-center">More</h3>
+      <!-- liens vers GitHub, LinkeIn, Malt, Mail -->
+    <li>
+      <% link_to "https://github.com/svilder", target: "_blank" do %>
+        <i class="fab fa-github"></i>
+      <% end %>
+    </li>
+
+    <li>
+      <% link_to "https://www.linkedin.com/in/sandra-vilder-29560565/", target: "_blank" do %>
+        <i class="fab fa-linkedin"></i>
+      <% end %>
+    </li>
+    <li><%= link_to 'Malt', "https://www.malt.fr/profile/sandravilder" %></li>
+    <li>
+      <%= mail_to "sandra.vilder@gmail.com", "@" %>
+    </li>
+  </div>
+
+  <div class="text-center">
+    <a href="#top"><i class="fas fa-arrow-up"></i></a>
+  </div>
+
+</div>
+
