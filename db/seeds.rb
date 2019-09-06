@@ -12,6 +12,17 @@ puts "start spreading the news"
 
 Projet.create(
   name:"Outbook",
+  description:"Airbnb-like website for renting your own garden, terrace or rooftop",
+  url:"",
+  image1:"",
+  image2:"",
+  image3:"",
+  image4:"",
+  image5:"",
+  )
+
+Projet.create(
+  name:"",
   description:"",
   url:"",
   image1:"",
@@ -20,6 +31,39 @@ Projet.create(
   image4:"",
   image5:"",
   )
+
+Projet.create(
+  name:"",
+  description:"",
+  url:"",
+  image1:"",
+  image2:"",
+  image3:"",
+  image4:"",
+  image5:"",
+  )
+
+Projet.create(
+  name:"",
+  description:"",
+  url:"",
+  image1:"",
+  image2:"",
+  image3:"",
+  image4:"",
+  image5:"",
+  )
+
+# Projet.create(
+#   name:"",
+#   description:"",
+#   url:"",
+#   image1:"",
+#   image2:"",
+#   image3:"",
+#   image4:"",
+#   image5:"",
+#   )
 
 
 puts "Now, there are #{Projet.count} saved via seed in Database"
