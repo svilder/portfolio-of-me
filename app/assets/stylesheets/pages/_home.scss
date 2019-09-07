@@ -2,20 +2,29 @@
 
 a {
   color: black;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  font-size: larger;
+  text-decoration: none;
 }
 
 .header{
-  // h1{
-  //   font-size: 70px;
-  // }
-  // h2{
-  //   font-size: 30px;
-  // }
+  h1{
+    font-size: 70px;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 30px;
+  }
 }
 
 .xp-display{
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
   // flex-direction: column;
 
 }
@@ -32,9 +41,7 @@ a {
 
 .links{
   a {
-    color: black;
     font-size: 50px;
-    text-decoration: none;
   }
   li{
     display: inline;
@@ -42,4 +49,15 @@ a {
   }
 }
 
+.name {
+  font-style: italic;
+}
 
+p {
+  font-weight: lighter;
+  margin: 10px 0 0 0;
+}
+
+.fas {
+  font-size: 50px;
+}

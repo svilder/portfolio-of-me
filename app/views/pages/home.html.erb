@@ -6,15 +6,17 @@
         Je suis développeuse back end et front end indépendante, j’utilise Ruby on Rails et j’ai été formée au Wagon à Paris.
       </p>
   </div>
+  <br>
+
   <div class="xp-display">
     <h3 class="text-center">XP</h3>
 
     <!-- each sur projet / display = carousel de bootstrap -->
 
     <% @projets.each do |projet| %>
+      <p class="text-center"> <span class="name"><%= link_to projet.name, projet.url %></span><br>
+      <span class="description"><%= projet.description %></span></p>
       <div class="cards">
-        <%= link_to projet.name, projet.url %>
-        <p><%= projet.description %></p>
         <div class="card-image">
           <%= image_tag projet.image1, class:"image" %>
         </div>
@@ -39,6 +41,7 @@
       </div>
     <% end %>
   </div>
+  <br>
 
 
   <h3 class="text-center">Skills</h3>
@@ -53,6 +56,7 @@
     <%= image_tag 'InDesign.png', class:"logo" %>
     <%= image_tag 'Photoshop.png', class:"logo" %>
   </div>
+  <br>
 
   <div class="details">
     <h3 class="text-center">Background</h3>
@@ -64,19 +68,20 @@
       Je suis sur Paris, mais je peux me déplacer car c’est toujours un plaisir de rencontrer mes clients en personne.
     </p>
   </div>
+  <br>
 
   <div class="links">
-    <h3 class="text-center">More</h3>
+    <h3 class="text-center" id="contact">More</h3>
       <!-- liens vers GitHub, LinkeIn, Malt, Mail -->
     <ul class="text-center">
       <li>
-        <% link_to "https://github.com/svilder", target: "_blank" do %>
+        <%= link_to "https://github.com/svilder", target: "_blank" do %>
           <i class="fab fa-github"></i>
         <% end %>
       </li>
 
       <li>
-        <% link_to "https://www.linkedin.com/in/sandra-vilder-29560565/", target: "_blank" do %>
+        <%= link_to "https://www.linkedin.com/in/sandra-vilder-29560565/", target: "_blank" do %>
           <i class="fab fa-linkedin"></i>
         <% end %>
       </li>
@@ -86,6 +91,8 @@
       </li>
     </ul>
   </div>
+  <br>
+  <br>
 
   <div class="text-center">
     <a href="#top"><i class="fas fa-arrow-up"></i></a>
