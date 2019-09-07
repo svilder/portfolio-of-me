@@ -5,30 +5,31 @@ a {
 }
 
 .header{
-  h1{
-    font-size: 70px;
-  }
-  h2{
-    font-size: 30px;
-  }
+  // h1{
+  //   font-size: 70px;
+  // }
+  // h2{
+  //   font-size: 30px;
+  // }
 }
+
 .xp-display{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  img{
-    width: 360px;
-    margin: 20px;
-  }
+  // flex-direction: column;
+
 }
+
 .skills{
   display: flex;
   justify-content: center;
 }
+
 .logo{
   height: 60px;
   margin: 10px;
 }
+
 .links{
   a {
     color: black;
@@ -41,8 +42,4 @@ a {
   }
 }
 
-.image {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+

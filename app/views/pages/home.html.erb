@@ -12,32 +12,30 @@
     <!-- each sur projet / display = carousel de bootstrap -->
 
     <% @projets.each do |projet| %>
-      <div class="card">
+      <div class="cards">
         <%= link_to projet.name, projet.url %>
         <p><%= projet.description %></p>
-            <div class="image">
-              <%= image_tag projet.image1, class:"w-50" %>
-            </div>
-            <div class="image">
-              <%= image_tag projet.image2, class:"w-50" %>
-            </div>
-            <% unless projet.image3 == "" || projet.image3.nil? %>
-              <div class="image">
-                <%= image_tag projet.image3, class:"w-50" %>
-              </div>
-            <% end %>
-            <% unless projet.image4 == "" || projet.image3.nil? %>
-              <div class="image">
-                <%= image_tag projet.image4, class:"w-50" %>
-              </div>
-            <% end %>
-            <% unless projet.image5 == "" || projet.image3.nil? %>
-              <div class="image">
-                <%= image_tag projet.image5, class:"w-50" %>
-              </div>
-            <% end %>
-          </div>
+        <div class="card-image">
+          <%= image_tag projet.image1, class:"image" %>
         </div>
+        <div class="card-image">
+          <%= image_tag projet.image2, class:"image" %>
+        </div>
+        <% unless projet.image3 == "" || projet.image3.nil? %>
+          <div class="card-image">
+            <%= image_tag projet.image3, class:"image" %>
+          </div>
+        <% end %>
+        <% unless projet.image4 == "" || projet.image4.nil? %>
+          <div class="card-image">
+            <%= image_tag projet.image4, class:"image" %>
+          </div>
+        <% end %>
+        <% unless projet.image5 == "" || projet.image5.nil? %>
+          <div class="card-image">
+            <%= image_tag projet.image5, class:"image" %>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
@@ -70,21 +68,23 @@
   <div class="links">
     <h3 class="text-center">More</h3>
       <!-- liens vers GitHub, LinkeIn, Malt, Mail -->
-    <li>
-      <% link_to "https://github.com/svilder", target: "_blank" do %>
-        <i class="fab fa-github"></i>
-      <% end %>
-    </li>
+    <ul class="text-center">
+      <li>
+        <% link_to "https://github.com/svilder", target: "_blank" do %>
+          <i class="fab fa-github"></i>
+        <% end %>
+      </li>
 
-    <li>
-      <% link_to "https://www.linkedin.com/in/sandra-vilder-29560565/", target: "_blank" do %>
-        <i class="fab fa-linkedin"></i>
-      <% end %>
-    </li>
-    <li><%= link_to 'Malt', "https://www.malt.fr/profile/sandravilder" %></li>
-    <li>
-      <%= mail_to "sandra.vilder@gmail.com", "@" %>
-    </li>
+      <li>
+        <% link_to "https://www.linkedin.com/in/sandra-vilder-29560565/", target: "_blank" do %>
+          <i class="fab fa-linkedin"></i>
+        <% end %>
+      </li>
+      <li><%= link_to 'Malt', "https://www.malt.fr/profile/sandravilder" %></li>
+      <li>
+        <%= mail_to "sandra.vilder@gmail.com", "@" %>
+      </li>
+    </ul>
   </div>
 
   <div class="text-center">
